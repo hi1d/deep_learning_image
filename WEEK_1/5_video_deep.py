@@ -1,11 +1,11 @@
-from turtle import color
 import cv2 as cv
+import dlib
+
 
 # 동영상 불러오기 ( 동영상은 이미지의 연속 )
-# cap = cv.VideoCapture('WEEK_1/04.mp4')
+cap = cv.VideoCapture('WEEK_1/04.mp4')
 
-# 웹캠 사용하기
-cap = cv.VideoCapture(0)
+
 
 # 이미지 반복으로 동영상처럼 재생하기
 while True:
@@ -13,6 +13,7 @@ while True:
 
     if ret == False:
         break
+    h, w, c = img.shape
     
     # 사각형 표시
     cv.rectangle(img, pt1=(721, 183), pt2=(878, 465), color=(255, 0, 0), thickness=2)

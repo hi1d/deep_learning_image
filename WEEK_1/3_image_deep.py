@@ -3,7 +3,6 @@ import cv2 as cv
 img = cv.imread('WEEK_1/01.jpg')
 # png파일을 오버레이를 입힐때는 IMREAD_UNCHANGED 사용
 overlay_img = cv.imread('WEEK_1/dices.png' , cv.IMREAD_UNCHANGED)
-
 # 이미지 크기 변환
 overlay_img = cv.resize(overlay_img, dsize=(150, 150))
 
