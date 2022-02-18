@@ -17,6 +17,9 @@ y1 = 100
 x2 = x1 + 150
 y2 = y1 + 150
 
+print(img.shape)
+print(overlay_img.shape)
+
 img[y1:y2, x1:x2] = overlay_alpha * overlay_img[:, :, :3] + background_alpha * img[y1:y2, x1:x2]
 
 cv.imshow('img',img)
